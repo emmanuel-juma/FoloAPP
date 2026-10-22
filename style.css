@@ -435,6 +435,8 @@ tab {
   color: #fff;
   border-color: #7c2d4a;
 }
+
+
 .gallery-grid {
   max-width: 72rem;
   margin: 2rem auto 0;
@@ -442,6 +444,7 @@ tab {
   columns: 1;
   column-gap: 1.25rem;
 }
+
 .design-card {
   break-inside: avoid;
   margin-bottom: 1.25rem;
@@ -456,17 +459,19 @@ tab {
   display: block;
   width: 100%;
   border: none;
-  background: none;
   cursor: pointer;
   overflow: hidden;
+  
 }
-design-image-btn img {
+.design-image-btn img {
   width: 100%;
   transition: transform 0.5s;
+  
 }
 
 .design-image-btn:hover img {
   transform: scale(1.05);
+  
 }
 
 .design-body {
@@ -486,6 +491,55 @@ design-image-btn img {
   font-weight: 500;
   color: #7c2d4a;
 }
+.design-category {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.like-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  background: #fce8ef;
+  color: #7c2d4a;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.like-btn:hover,
+.like-btn.liked {
+  background: #f8d4e0;
+}
+
+.design-price {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.design-actions {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.gallery-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  padding: 0 1.25rem;
+}
+
+.gallery-note {
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+
 
 /* 
 ========================================
