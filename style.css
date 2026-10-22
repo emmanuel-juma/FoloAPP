@@ -384,9 +384,11 @@ service-card:hover .service-image img {
   font-size: 0.75rem;
   color: #7a5c68;
 }
-/* ========================================
-   Gallery
-   ======================================== */
+/* 
+========================================
+Gallery
+======================================== 
+*/
 
 .gallery {
   background: linear-gradient(160deg, #fdf0f4 0%, #fffafb 70%);
@@ -439,6 +441,50 @@ tab {
   padding: 0 1.25rem;
   columns: 1;
   column-gap: 1.25rem;
+}
+.design-card {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+  background: #ffffff;
+  border: 1px solid #f0d6df;
+  border-radius: 1.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(124, 45, 74, 0.06);
+}
+
+.design-image-btn {
+  display: block;
+  width: 100%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+design-image-btn img {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.design-image-btn:hover img {
+  transform: scale(1.05);
+}
+
+.design-body {
+  padding: 1rem;
+}
+
+.design-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.design-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #7c2d4a;
 }
 
 /* 
