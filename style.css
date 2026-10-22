@@ -433,6 +433,13 @@ tab {
   color: #fff;
   border-color: #7c2d4a;
 }
+.gallery-grid {
+  max-width: 72rem;
+  margin: 2rem auto 0;
+  padding: 0 1.25rem;
+  columns: 1;
+  column-gap: 1.25rem;
+}
 
 /* 
 ========================================
