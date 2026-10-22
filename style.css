@@ -161,12 +161,15 @@ Header
 }
 .nav-link {
     font-size: 0.9rem;
-    color: #101010;
     transition: color 0.2s;
+    background: transparent;
+    color: #7c2d4a;
+    border: none;
 }
 
+
 .nav-link:hover {
-  color: #7c2d4a;
+  color: #fb0b53c4;
 }
 
 .header-actions {
