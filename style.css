@@ -604,7 +604,53 @@ The contact section
 ================== 
 */
 
+.contact {
+  background: linear-gradient(160deg, #6b2340 0%, #8c3355 100%);
+  color: #fff;
+  padding: 5rem 1.25rem;
+}
 
+.contact .section-title {
+  color: #fff;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.contact-content {
+  max-width: 72rem;
+  margin: 2rem auto 0;
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-placeholder {
+  opacity: 0.75;
+}
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.footer-copy {
+  max-width: 72rem;
+  margin: 3.5rem auto 0;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
 
  
 
