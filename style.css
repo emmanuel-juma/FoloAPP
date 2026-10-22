@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -321,11 +321,13 @@ The hero section
 }
 
 .service-image {
+
   aspect-ratio: 4 / 3;
   overflow: hidden;
 }
 
 .service-image img {
+
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -349,19 +351,19 @@ service-card:hover .service-image img {
     gap: 0.75rem;
 }
 .service-name {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.35rem;
-  font-weight: 500;
-  color: #7c2d4a;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #7c2d4a;
 }
 .service-price {
-  flex-shrink: 0;
-  background: #fce8ef;
-  color: #7c2d4a;
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
+    flex-shrink: 0;
+    background: #fce8ef;
+    color: #7c2d4a;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
 }
 
 .service-desc {
@@ -382,6 +384,68 @@ service-card:hover .service-image img {
   font-size: 0.75rem;
   color: #7a5c68;
 }
+
+/* 
+========================================
+About
+======================================== 
+*/
+
+.about {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 5rem 1.25rem;
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 2rem;
+  box-shadow: 0 4px 20px rgba(124, 45, 74, 0.06);
+}
+
+.about-desc {
+  margin-top: 1.25rem;
+  color: #7a5c68;
+  line-height: 1.7;
+}
+
+.about-specialties {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #7a5c68;
+}
+
+/*
+=================
+The contact section
+================== 
+*/
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
