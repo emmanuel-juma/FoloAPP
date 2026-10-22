@@ -675,7 +675,8 @@ Booking
   border-radius: 0.75rem;
   padding: 0.75rem;
   background: #fffafb;
-  min-height: 16rem;
+  min-height: fit-content;
+  width: 100%;
 }
 
 /* Time slots */
@@ -721,7 +722,7 @@ Booking
 }
 
 .summary-date {
-  color: var(--muted);
+  color: #7a5c68;
   margin: 0.15rem 0;
 }
 /*
@@ -779,23 +780,6 @@ The contact section
 }
 
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*
