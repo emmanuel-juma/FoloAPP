@@ -475,7 +475,29 @@ About
   font-size: 0.9rem;
   color: #7a5c68;
 }
+/* 
+========================================
+Booking
+======================================== 
+*/
 
+.booking {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 5rem 1.25rem;
+}
+
+.reminder-notice {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #fce8ef;
+  border: 1px solid rgba(232, 160, 184, 0.4);
+  border-radius: 1.25rem;
+  font-size: 0.875rem;
+  color: #2d1a22;
+}
 /*
 =================
 The contact section
