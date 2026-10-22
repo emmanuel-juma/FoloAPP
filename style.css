@@ -414,7 +414,7 @@ Gallery
   padding-bottom: 0.5rem;
 }
 
-tab {
+.tab {
   flex-shrink: 0;
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
