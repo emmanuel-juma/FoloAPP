@@ -637,7 +637,7 @@ Booking
 .form-select,
 .form-group input,
 .form-group textarea {
-  width: 100%;
+  width: 95%;
   height: 2.75rem;
   padding: 0 0.75rem;
   border: 1px solid #f0d6df;
@@ -667,6 +667,62 @@ Booking
   margin-top: 0.5rem;
   font-size: 0.8rem;
   color: #7a5c68;
+}
+/* Calendar placeholder */
+.calendar {
+  margin-top: 0.5rem;
+  border: 1px solid #f0d6df;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  background: #fffafb;
+  min-height: 16rem;
+}
+
+/* Time slots */
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.time-slot {
+  padding: 0.5rem 1rem;
+  border: 1px solid #f0d6df;
+  border-radius: 9999px;
+  background: #ffffff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.time-slot:hover {
+  border-color: #7c2d4a;
+}
+
+.time-slot.selected {
+  background: #7c2d4a;
+  color: #fff;
+  border-color: #7c2d4a;
+}
+
+/* Summary box */
+.booking-summary {
+  margin-top: auto;
+  padding: 1rem;
+  background: #fce8ef;
+  border-radius: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.summary-service,
+.summary-price {
+  font-weight: 600;
+}
+
+.summary-date {
+  color: var(--muted);
+  margin: 0.15rem 0;
 }
 /*
 =================
