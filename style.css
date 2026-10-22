@@ -412,6 +412,28 @@ service-card:hover .service-image img {
   padding-bottom: 0.5rem;
 }
 
+tab {
+  flex-shrink: 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 9999px;
+  border: 1px solid #f0d6df;
+  background: #ffffff;
+  color: #2d1a22;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  border-color: rgba(124, 45, 74, 0.4);
+}
+
+.tab.active {
+  background:  #7c2d4a;
+  color: #fff;
+  border-color: #7c2d4a;
+}
+
 /* 
 ========================================
 About
