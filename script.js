@@ -149,7 +149,7 @@ if ( Name !== '' && phone !== '' && email !== '' && service !== '' ){
   alert('Appointment booked successful')
 }else{
   e.preventDefault();
-  alert('please fill in the form')
+  alert('please fill in the form to book an appointment')
 }
 
 
