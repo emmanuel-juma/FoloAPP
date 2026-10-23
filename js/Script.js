@@ -1,169 +1,174 @@
 
-//------------------Navbar & Mobile Navbar---------------
-document.addEventListener('DOMContentLoaded', () =>{
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMobile = document.getElementById('nav-mobile');
+const YOUTUBE_API_KEY = 'AIzaSyAfTNM0wQ_-X8nAFI0zmmuynTg00FhW8Kk';
 
-  if (menuToggle && navMobile) {
-    menuToggle.addEventListener('click', () => {
-      const isOpen = navMobile.style.display === 'block';
-      navMobile.style.display = isOpen ? 'none' : 'block';
-      menuToggle.textContent = isOpen ? '☰' : '✕';
-    });
+// ===== Elements =====
+const landingPage = document.getElementById('landing');
+const loginPage = document.getElementById('login');
+const appPage = document.getElementById('app');
 
-    // This code will Close mobile menu when a link is clicked
-    navMobile.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navMobile.style.display = 'none';
-        menuToggle.textContent = '☰';
-      });
-    });
-  }
-})
+const getStartedBtn = document.getElementById('getStartedBtn');
+const loginForm = document.getElementById('loginForm');
+const logoutBtn = document.getElementById('logoutBtn');
+const userNameSpan = document.getElementById('userName');
+
+const searchInput = document.getElementById('searchInput');
+const searchBtn = document.getElementById('searchBtn');
+const resultsDiv = document.getElementById('results');
+const youtubeResults = document.getElementById('youtubeResults'); // add this div to your HTML
+
+// ===== Show one page =====
+function showPage(page) {
+  landingPage.classList.remove('active');
+  loginPage.classList.remove('active');
+  appPage.classList.remove('active');
+  page.classList.add('active');
+}
+
+// ===== Buttons =====
 
 
-//-------------------------------------------------------
-
-
-//---------------Smooth scroll for Nav Buttons-----------
-
-document.querySelectorAll('.nav-link, .btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const text = btn.textContent.trim().toLowerCase();
-
-      // Map button text to section IDs
-      const map = {
-        'home': 'home',
-        'services & prices': 'services',
-        'nail gallery': 'gallery',
-        'about': 'about',
-        'contact': 'contact',
-        'book appointment': 'booking',
-        'book your appointment': 'booking',
-        'explore nail designs': 'gallery'
-      };
-
-      const targetId = map[text];
-      if (targetId) {
-        e.preventDefault();
-        const section = document.getElementById(targetId);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    });
+getStartedBtn.addEventListener('click', function () {
+  showPage(loginPage);
 });
 
-//------------------------------------------------------
-// This code selects the images according to the button that has been clicked by filtering. 
-
-const tabs = document.querySelectorAll('.gallery-tabs .tab');
-  const designCards = document.querySelectorAll('.design-card');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      // Remove active from all tabs
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      const category = tab.textContent.trim().toLowerCase();
-
-      designCards.forEach(card => {
-        const cardCategory = card.querySelector('.category')?.textContent.trim().toLowerCase() || '';
-
-        if (category === 'all designs' || cardCategory.includes(category.replace(' nails', '').replace(' designs', ''))) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-});
-
-//---------------------------------------------------
-// code for the booking form logic 
-const serviceSelect = document.getElementById('service');
-const durationHint = document.querySelector('.duration-hint');
-const summaryService = document.querySelector('.summary-service');
-const summaryPrice = document.querySelector('.summary-price');
-const summaryDate = document.querySelector('.summary-date');
-const bookingForm = document.querySelector('.booking-form');
-
-// the data for all the services
-
-const services = {
-  'classic-mani': { name: 'Classic Manicure', price: 'KES 800', duration: 45 },
-  'classic-pedi': { name: 'Classic Pedicure', price: 'KES 1,000', duration: 60 },
-  'gel-mani': { name: 'Gel Manicure', price: 'KES 1,500', duration: 60 },
-  'gel-pedi': { name: 'Gel Pedicure', price: 'KES 1,800', duration: 75 },
-  'acrylic-ext': { name: 'Acrylic Nail Extensions', price: 'KES 2,500', duration: 120 },
-  'gel-ext': { name: 'Gel Nail Extensions', price: 'KES 2,800', duration: 120 },
-  'french': { name: 'French Tips', price: 'KES 1,500', duration: 60 },
-  'nail-art': { name: 'Nail Art', price: 'From KES 300', duration: 30 },
-  'combo': { name: 'Manicure & Pedicure Combo', price: 'KES 2,000', duration: 105 }
-}
-
-// This code will Update summary when service changes
-if (serviceSelect) {
-  serviceSelect.addEventListener('change', () => {
-    const selected = services[serviceSelect.value];
-    if (selected) {
-      if (durationHint) durationHint.textContent = `~${selected.duration} min`;
-      if (summaryService) summaryService.textContent = selected.name;
-      if (summaryPrice) summaryPrice.textContent = selected.price;
-    }
-  });
-}
-
-
-
-// form submit code
-
-if (bookingForm){
-  bookingForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-  })
-}
-
-const Name = document.getElementById('name')?.value.trim();
-const phone = document.getElementById('phone')?.value.trim();
-const email = document.getElementById('email')?.value.trim();
-const notes = document.getElementById('notes')?.value.trim();
-const service = serviceSelect?.value;
-const selectedTime = document.querySelector('.time-slot.selected')?.textContent;
-
-
-// validation code
-if (!Name || !phone){
-  alert("please enter your name and phone number")
-  return;
-}
-
-
-if (!selectedTime) {
-  alert('Please select a time slot.');
-  return;
-}
-
-if ( Name !== '' && phone !== '' && email !== '' && service !== '' ){
-  alert('Appointment booked successful')
-}else{
+loginForm.addEventListener('submit', function (e) {
   e.preventDefault();
-  alert('please fill in the form to book an appointment')
+
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value;
+
+  if (username === '' || password === '') {
+    alert('Please enter name and password');
+    return;
+  }
+
+  userNameSpan.textContent = username;
+  showPage(appPage);
+});
+
+logoutBtn.addEventListener('click', function () {
+  document.getElementById('username').value = '';
+  document.getElementById('password').value = '';
+  searchInput.value = '';
+  resultsDiv.innerHTML = '';
+  youtubeResults.innerHTML = '';
+  showPage(landingPage);
+});
+
+searchBtn.addEventListener('click', function () {
+  const query = searchInput.value.trim();
+
+  if (query === '') {
+    alert('Please type a course name');
+    return;
+  }
+
+  searchResources(query);
+  searchYouTube(query);
+});
+
+searchInput.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') {
+    searchBtn.click();
+  }
+});
+
+
+
+
+// ===== Books (Open Library) =====
+function searchResources(query) {
+  resultsDiv.textContent = 'Loading resources...';
+
+  fetch('https://openlibrary.org/search.json?q=' + encodeURIComponent(query) + '&limit=8')
+    .then(function (response) {
+      if (!response.ok) throw new Error('Open Library request failed');
+      return response.json();
+    })
+    .then(function (data) {
+      resultsDiv.innerHTML = '';
+
+      if (data.docs.length === 0) {
+        resultsDiv.textContent = 'No resources found. Try another course.';
+        return;
+      }
+
+      data.docs.forEach(function (book) {
+        const author = book.author_name ? book.author_name[0] : 'Unknown author';
+        const year = book.first_publish_year || 'N/A';
+
+        const card = document.createElement('div');
+        card.className = 'result-card';
+
+        const title = document.createElement('h3');
+        title.textContent = book.title || 'No title';
+
+        const info = document.createElement('p');
+        info.textContent = 'Author: ' + author + ' | Year: ' + year;
+
+        card.appendChild(title);
+        card.appendChild(info);
+        resultsDiv.appendChild(card);
+      });
+    })
+    .catch(function (error) {
+      resultsDiv.textContent = 'Something went wrong. Please try again.';
+      console.log(error);
+    });
 }
 
+// ===== Videos (YouTube) =====
+function searchYouTube(query) {
+  youtubeResults.textContent = 'Loading YouTube videos...';
 
+  const url =
+    'https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=6' +
+    '&q=' + encodeURIComponent(query + ' educational tutorial') +
+    '&key=' + YOUTUBE_API_KEY;
 
-const booking = {
-  id: Date.now(),
-  service: services[service]?.name || service,
-  price: services[service]?.price,
-  time: selectedTime,
-  Name,
-  phone,
-  email,
-  notes,
-  createdAt: new Date().toISOString()
-};
+  fetch(url)
+    .then(function (response) {
+      if (!response.ok) throw new Error('YouTube API request failed');
+      return response.json();
+    })
+    .then(function (data) {
+      youtubeResults.innerHTML = '';
 
+      if (!data.items || data.items.length === 0) {
+        youtubeResults.textContent = 'No videos found. Try another search.';
+        return;
+      }
 
+      data.items.forEach(function (video) {
+        const card = document.createElement('div');
+        card.className = 'result-card';
+
+        const image = document.createElement('img');
+        image.src = video.snippet.thumbnails.medium.url;
+        image.alt = video.snippet.title;
+        image.style.width = '100%';
+
+        const title = document.createElement('h3');
+        title.textContent = video.snippet.title;
+
+        const channel = document.createElement('p');
+        channel.textContent = 'Channel: ' + video.snippet.channelTitle;
+
+        const link = document.createElement('a');
+        link.href = 'https://www.youtube.com/watch?v=' + video.id.videoId;
+        link.textContent = 'Watch Video';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+
+        card.appendChild(image);
+        card.appendChild(title);
+        card.appendChild(channel);
+        card.appendChild(link);
+        youtubeResults.appendChild(card);
+      });
+    })
+    .catch(function (error) {
+      youtubeResults.textContent = 'Unable to load YouTube videos. Please try again.';
+      console.log(error);
+    });
+}
