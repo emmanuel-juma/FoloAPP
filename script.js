@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', () =>{
 })
 
 
-//-------------------------------------------------
+//-------------------------------------------------------
 
 
-//---------------Smooth scroll for Nav Buttons-----
+//---------------Smooth scroll for Nav Buttons-----------
 
 document.querySelectorAll('.nav-link, .btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -55,4 +55,64 @@ document.querySelectorAll('.nav-link, .btn').forEach(btn => {
 });
 
 //------------------------------------------------------
+// This code selects the images according to the button that has been clicked by filtering. 
+
+const tabs = document.querySelectorAll('.gallery-tabs .tab');
+  const designCards = document.querySelectorAll('.design-card');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Remove active from all tabs
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const category = tab.textContent.trim().toLowerCase();
+
+      designCards.forEach(card => {
+        const cardCategory = card.querySelector('.category')?.textContent.trim().toLowerCase() || '';
+
+        if (category === 'all designs' || cardCategory.includes(category.replace(' nails', '').replace(' designs', ''))) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+});
+
+//---------------------------------------------------
+// code for the booking form logic 
+const serviceSelect = document.getElementById('service');
+const durationHint = document.querySelector('.duration-hint');
+const summaryService = document.querySelector('.summary-service');
+const summaryPrice = document.querySelector('.summary-price');
+const summaryDate = document.querySelector('.summary-date');
+const bookingForm = document.querySelector('.booking-form');
+
+// the data for all the services
+
+const services = {
+    'classic-mani': { name: 'Classic Manicure', price: 'KES 800', duration: 45 },
+    'classic-pedi': { name: 'Classic Pedicure', price: 'KES 1,000', duration: 60 },
+    'gel-mani': { name: 'Gel Manicure', price: 'KES 1,500', duration: 60 },
+    'gel-pedi': { name: 'Gel Pedicure', price: 'KES 1,800', duration: 75 },
+    'acrylic-ext': { name: 'Acrylic Nail Extensions', price: 'KES 2,500', duration: 120 },
+    'gel-ext': { name: 'Gel Nail Extensions', price: 'KES 2,800', duration: 120 },
+    'french': { name: 'French Tips', price: 'KES 1,500', duration: 60 },
+    'nail-art': { name: 'Nail Art', price: 'From KES 300', duration: 30 },
+    'combo': { name: 'Manicure & Pedicure Combo', price: 'KES 2,000', duration: 105 }
+}
+
+// This code will Update summary when service changes
+  if (serviceSelect) {
+    serviceSelect.addEventListener('change', () => {
+      const selected = services[serviceSelect.value];
+      if (selected) {
+        if (durationHint) durationHint.textContent = `~${selected.duration} min`;
+        if (summaryService) summaryService.textContent = selected.name;
+        if (summaryPrice) summaryPrice.textContent = selected.price;
+      }
+    });
+}
+
 
