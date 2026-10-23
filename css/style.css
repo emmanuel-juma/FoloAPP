@@ -52,14 +52,8 @@ body {
 }
 
 
-nav {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  width: 100%;
-  justify-content: space-between;
-  height: 10px;
-}
+
+
 .a-tags{
   display: flex;
   align-items: center;
@@ -72,7 +66,6 @@ nav {
 #welcome-banner h3 {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   margin-bottom: 1rem;
   padding: 8px 14px;
   border: 1px solid #D2E0EC;
@@ -82,9 +75,11 @@ nav {
   font-weight: 700;
   letter-spacing: 0.045em;
   text-transform: uppercase;
+
+
 }
 
-nav a {
+.navbar a {
   position: relative;
   color: black;
   font-weight: 500;
@@ -92,11 +87,27 @@ nav a {
   
 
 }
+.navbar {
+  padding: 18px 8%;
+  border-bottom: 1px solid #e8e2e5;
+  display: flex;
+  padding: 1.5rem;
+  position: fixed;
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+  background-color: #ffffffec;
+  justify-content: space-between;
+
+
+}
+
+
 a {
   text-decoration: none;
 }
 
-nav a:hover {
+.navbar a:hover {
   color: #ff0000;
 }
 
@@ -115,7 +126,7 @@ nav a:hover {
   background: #f6f3f4;
 }
 #landing{
-  padding: 50px;
+  padding: 5rem;
 }
 
 /* ===== Buttons ===== */
@@ -142,10 +153,7 @@ input:focus-visible {
 }
 
 /* ===== Landing: navbar ===== */
-.navbar {
-  padding: 18px 8%;
-  border-bottom: 1px solid #e8e2e5;
-}
+
 
 .logo {
   font-size: 1.3rem;
@@ -264,14 +272,14 @@ input:focus {
 }
 
 /* ===== App ===== */
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-header h1 {
+.header h1 {
   font-size: 1.5rem;
 }
 
@@ -373,9 +381,17 @@ header h1 {
   display: flex;
   color: #D2E0EC;
   align-items: flex-end;
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0),
+    rgba(216, 203, 203, 0.1)
+  );
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.blog-item h3{
+  color: white;
+}
 .blog-item-content {
   width: 100%;
   padding: 20px;
