@@ -3,581 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Folo App</title>
   <link rel="stylesheet" href="css/style.css">
-  <title>FoloApp – Nail Studio</title>
 </head>
 <body>
-
-  <!-- ========== HEADER ========== -->
-  <header id="header" class="header">
-
-    <div class="header-inner">
-      <a href="#home" class="logo">FoloApp</a>
-
-      <!-- Desktop nav -->
-      <nav class="nav-desktop" aria-label="Main">
-        <button href="#home" class="nav-link">Home</button>
-        <button href="#services" class="nav-link">Services &amp; Prices</button>
-        <button href="#gallery" class="nav-link">Nail Gallery</button>
-        <button href="#about" class="nav-link">About</button>
-        <button href="#contact" class="nav-link">Contact</button>
-      </nav>
-
-      <div class="header-actions">
-        <a href="#booking" class="btn btn-primary">Book Appointment</a>
-        <button class="menu-toggle" aria-label="Open menu" id="menu-toggle">
-          ☰
-        </button>
-      </div>
+  <header class="header">
+    <!-----Navbar--------->
+    <div class="container nav">
+     
+      <nav id="nav">
+        <div class="logo">FA</div>
+        <div class="a-tags">
+          <a href="index.html">About</a>
+          <a href="goals.html">Blog</a>
+          <a href=".footer">contact</a> 
+        </div>
+       
+        <button type="button" id="getStartedBtn">Get Started</button>
+      </nav> 
     </div>
-
-    <!-- Mobile nav -->
-    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile" hidden>
-      <a href="#home" class="nav-link">Home</a>
-      <a href="#services" class="nav-link">Services &amp; Prices</a>
-      <a href="#gallery" class="nav-link">Nail Gallery</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#booking" class="nav-link">Book Appointment</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </nav>
   </header>
 
-  <main>
+  <!-- ========== 1. LANDING PAGE ========== -->
 
-    <!-- ========== HERO / HOME ========== -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <div class="hero-text">
-          <p class="eyebrow">Beautiful nails. Effortless bookings.</p>
-          <h1 class="hero-title">Your Next Favourite Nail Set Starts Here.</h1>
-          <p class="hero-desc">
-            Explore beautiful nail designs, discover your perfect manicure or pedicure,
-            and reserve your appointment in just a few clicks.
-          </p>
-          <div class="hero-buttons">
-            <button href="#booking" class="btn btn-primary">Book Your Appointment</button>
-            <button href="#gallery" class="btn btn-outline">Explore Nail Designs</button>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="assets/58f6005505b71a46a9f5d0a8d095c116.jpg" alt="Manicured hands with glossy blush almond nails">
-        </div>
+  <section id="landing" class="page active">
+    <div>
+      <div id="welcome-banner">
+        <h1>WELCOME TO FOLOAPP</h1>
+        <h3>About</h3>
+        <p>
+          Folo App is a learning platform that helps students find study
+          materials and educational resources for their courses. Whether you
+          study Engineering, Medicine, Law, Philosophy, or something else,
+          Folo helps you discover useful books and videos.
+        </p>
+        <p>
+          Our goal is to bring learning resources together in one place, with
+          a simple design that makes searching easy.
+        </p>
       </div>
 
-      <!-- Feature bar -->
-      <ul class="features">
-        <li class="feature-item">
-          <span class="feature-icon"><!-- sparkles --></span>
-          Professional nail care
-        </li>
-        <li class="feature-item">
-          <span class="feature-icon"><!-- palette --></span>
-          Creative nail art
-        </li>
-        <li class="feature-item">
-          <span class="feature-icon"><!-- tag --></span>
-          Transparent KES pricing
-        </li>
-        <li class="feature-item">
-          <span class="feature-icon"><!-- calendar --></span>
-          Convenient online booking
-        </li>
-      </ul>
-    </section>
-
-    <!-- ========== SERVICES ========== -->
-    <section id="services" class="services">
-      <p class="eyebrow">Services &amp; Prices</p>
-      <h2 class="section-title">Care for hands &amp; feet</h2>
-      <p class="section-desc">Sample starting prices — final prices will be confirmed by the salon.</p>
-
-      <div class="services-grid">
-
-        <!-- Service card template (repeat for each) -->
-        <article class="service-card">
-          <div class="service-image">
-            <img src="assets/hero-G1gLJUxe.jpg" alt="Classic Manicure">
-          </div>
-          <div class="service-body">
-            <div class="service-header">
-              <h3 class="service-name">Classic Manicure</h3>
-              <span class="service-price">KES 800</span>
-            </div>
-            <p class="service-desc">Shaping, cuticle care, hand massage and a polish of your choice.</p>
-            <div class="service-footer">
-              <span class="service-duration">~45 min</span>
-              <button class="btn btn-outline btn-sm book-service-btn" data-service="classic-mani">
-                Book This Service
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <div class="service-image">
-            <img src="assets/6d4fd4cf912846546ad64c9e9150f984.jpg" alt="Classic Pedicure">
-          </div>
-          <div class="service-body">
-            <div class="service-header">
-              <h3 class="service-name">Classic Pedicure</h3>
-              <span class="service-price">KES 1,000</span>
-            </div>
-            <p class="service-desc">Soak, scrub, nail care and a relaxing foot massage.</p>
-            <div class="service-footer">
-              <span class="service-duration">~60 min</span>
-              <button class="btn btn-outline btn-sm book-service-btn" data-service="classic-pedi">
-                Book This Service
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <div class="service-image">
-            <img src="assets/5b8f8c33e794279f363ec2a896606008.jpg" alt="Gel Manicure">
-          </div>
-          <div class="service-body">
-            <div class="service-header">
-              <h3 class="service-name">Gel Manicure</h3>
-              <span class="service-price">KES 1,500</span>
-            </div>
-            <p class="service-desc">Long-lasting, high-shine gel colour cured to perfection.</p>
-            <div class="service-footer">
-              <span class="service-duration">~60 min</span>
-              <button class="btn btn-outline btn-sm book-service-btn" data-service="gel-mani">
-                Book This Service
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <div class="service-image">
-            <img src="assets/f5a3787cacfa07bcf75373fe476093e5.jpg" alt="Gel Pedicure">
-          </div>
-          <div class="service-body">
-            <div class="service-header">
-              <h3 class="service-name">Gel Pedicure</h3>
-              <span class="service-price">KES 1,800</span>
-            </div>
-            <p class="service-desc">Full pedicure finished with chip-resistant gel colour.</p>
-            <div class="service-footer">
-              <span class="service-duration">~75 min</span>
-              <button class="btn btn-outline btn-sm book-service-btn" data-service="gel-pedi">
-                Book This Service
-              </button>
-            </div>
-          </div>
-        </article>
-
-
-
-        <article class="service-card">
-          <div class="service-image">
-            <img src="assets/1fede7f1e4025f71ef0b71cdc23ebb34.jpg" alt="Acrylic Nail Extensions">
-          </div>
-          <div class="service-body">
-            <div class="service-header">
-              <h3 class="service-name">Acrylic Nail Extensions</h3>
-              <span class="service-price">KES 2,500</span>
-            </div>
-            <p class="service-desc">Durable sculpted length in the shape you love.</p>
-            <div class="service-footer">
-              <span class="service-duration">~120 min</span>
-              <button class="btn btn-outline btn-sm book-service-btn" data-service="acrylic-ext">
-                Book This Service
-              </button>
-            </div>
-          </div>
-        </article>
-
-
-
-        <article class="service-card">
-          <div class="service-image">
-            <img src="assets/618uSuHAs1L._AC_UF1000,1000_QL80_.jpg" alt="Gel Nail Extensions">
-          </div>
-          <div class="service-body">
-            <div class="service-header">
-              <h3 class="service-name">Gel Nail Extensions</h3>
-              <span class="service-price">KES 2,800</span>
-            </div>
-            <p class="service-desc">Lightweight, natural-looking gel length and strength.</p>
-            <div class="service-footer">
-              <span class="service-duration">~120 min</span>
-              <button class="btn btn-outline btn-sm book-service-btn" data-service="gel-ext">
-                Book This Service
-              </button>
-            </div>
-          </div>
-        </article>
-
-
-
-        <article class="service-card">
-          <div class="service-image">
-            <img src="assets/11.PinkCrocodile-a8e52a8123f4436d95e91db460ba88f5.jpg" alt="French Tips">
-          </div>
-          <div class="service-body">
-            <div class="service-header">
-              <h3 class="service-name">French Tips</h3>
-              <span class="service-price">KES 1,500</span>
-            </div>
-            <p class="service-desc">Timeless crisp tips on a soft nude base.</p>
-            <div class="service-footer">
-              <span class="service-duration">~60 min</span>
-              <button class="btn btn-outline btn-sm book-service-btn" data-service="french">
-                Book This Service
-              </button>
-            </div>
-          </div>
-        </article>
-
-
-
-        <article class="service-card">
-          <div class="service-image">
-            <img src="assets/319570921_899070877944058_2824383129064434289_n-fd4e4338fdbc49608d2eba485afe71d3.jpg" alt="Nail Art">
-          </div>
-          <div class="service-body">
-            <div class="service-header">
-              <h3 class="service-name">Nail Art</h3>
-              <span class="service-price">From KES 300</span>
-            </div>
-            <p class="service-desc">Hand-painted details, chrome, foils and gems — priced per design.</p>
-            <div class="service-footer">
-              <span class="service-duration">~30 min</span>
-              <button class="btn btn-outline btn-sm book-service-btn" data-service="nail-art">
-                Book This Service
-              </button>
-            </div>
-          </div>
-        </article>
-
-
-
-        <article class="service-card">
-          <div class="service-image">
-            <img src="assets/d03755694eaf9de81c977e66d3a9d54d.jpg" alt="Manicure &amp; Pedicure Combo">
-          </div>
-          <div class="service-body">
-            <div class="service-header">
-              <h3 class="service-name">Manicure &amp; Pedicure Combo</h3>
-              <span class="service-price">KES 2,000</span>
-            </div>
-            <p class="service-desc">Classic manicure and pedicure in one pampering visit.</p>
-            <div class="service-footer">
-              <span class="service-duration">~105 min</span>
-              <button class="btn btn-outline btn-sm book-service-btn" data-service="combo">
-                Book This Service
-              </button>
-            </div>
-          </div>
-        </article>
-
-        
-
-      </div>
-    </section>
-
-    <!-- ========== GALLERY ========== -->
-    <section id="gallery" class="gallery">
-      <p class="eyebrow">Nail Gallery</p>
-      <h2 class="section-title">Find your next set</h2>
-
-      <!-- Category tabs -->
-      <div class="gallery-tabs" role="tablist" aria-label="Design categories">
-        <button class="tab active" data-category="all" role="tab" aria-selected="true">All Designs</button>
-        <button class="tab" data-category="manicures" role="tab">Manicures</button>
-        <button class="tab" data-category="pedicures" role="tab">Pedicures</button>
-        <button class="tab" data-category="gel" role="tab">Gel Nails</button>
-        <button class="tab" data-category="acrylic" role="tab">Acrylic Nails</button>
-        <button class="tab" data-category="french" role="tab">French Tips</button>
-        <button class="tab" data-category="art" role="tab">Nail Art</button>
-        <button class="tab" data-category="trending" role="tab">Trending Designs</button>
+      <div class="container">
+        <h1>Folo App</h1>
+        <p>Find free study resources for any course</p>
+        <p>Engineering ~ Medicine ~ Philosophy ~ Law ~ and more</p>
       </div>
 
-      <!-- Design cards -->
-      <div class="gallery-grid">
 
-        <article class="design-card">
-          <div class="design-img-btn">
-            <img src="assets/Nina-nails.jpeg" alt="Blush Almond Gloss">
-          </div>
+    </div>
+  </section>
 
-          <div class="design-body">
-            <div class="design-header">
-              <div>
-                <h3>Blush Almond Gloss</h3>
-                <p class="category">Manicures</p>
-              </div>
-              <button class="like-btn">♥ 48</button>
-            </div>
-            <p class="price">KES 2,800</p>
-            <div class="design-actions">
-              <button class="btn btn-ghost">View Details</button>
-              <button class="btn btn-primary">Book This Design</button>
-            </div>
-          </div>
-        </article>
+  <!-- ========== 2. LOGIN PAGE ========== -->
+  <section id="login" class="page">
+    <div class="container">
+      <h2>Login to Folo App</h2>
 
-        <article class="design-card">
-          <div class="design-img-btn">
-            <img src="assets/335348ab3341e6b6af94fbc9f6f9bdce.jpg" alt="Classic French">
-          </div>
-
-          <div class="design-body">
-            <div class="design-header">
-              <div>
-                <h3>Classic French</h3>
-                <p class="category">Manicures</p>
-              </div>
-              <button class="like-btn">♥ 36</button>
-            </div>
-            <p class="price">KES 1,500</p>
-            <div class="design-actions">
-              <button class="btn btn-ghost">View Details</button>
-              <button class="btn btn-primary">Book This Design</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="design-card">
-          <div class="design-img-btn">
-            <img src="assets/702139398200034452.jpeg" alt="Cherry Blossom Coffin">
-          </div>
-
-
-          <div class="design-body">
-            <div class="design-header">
-              <div>
-                <h3>Cherry Blossom Coffin</h3>
-                <p class="category">Acrylic Nails</p>
-              </div>
-              <button class="like-btn">♥ 61</button>
-            </div>
-            <p class="price">From KES 3,500</p>
-            <div class="design-actions">
-              <button class="btn btn-ghost">View Details</button>
-              <button class="btn btn-primary">Book This Design</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="design-card">
-
-          <div class="design-img-btn">
-            <img src="assets/Nice toes.jpeg" alt="Plum Gel Pedicure">
-          </div>
-
-          <div class="design-body">
-            <div class="design-header">
-              <div>
-                <h3>Plum Gel Pedicure</h3>
-                <p class="category">Pedicures</p>
-              </div>
-              <button class="like-btn">♥ 22</button>
-            </div>
-            <p class="price">KES 1,800</p>
-            <div class="design-actions">
-              <button class="btn btn-ghost">View Details</button>
-              <button class="btn btn-primary">Book This Design</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="design-card">
-
-          <div class="design-img-btn">
-            <img src="assets/1fede7f1e4025f71ef0b71cdc23ebb34.jpg" alt="Pearl Chrome Glaze">
-          </div>
-
-          <div class="design-body">
-            <div class="design-header">
-              <div>
-                <h3>Pearl Chrome Glaze</h3>
-                <p class="category">Manicures</p>
-              </div>
-              <button class="like-btn">♥ 54</button>
-            </div>
-            <p class="price">KES 2,000</p>
-            <div class="design-actions">
-              <button class="btn btn-ghost">View Details</button>
-              <button class="btn btn-primary">Book This Design</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="design-card">
-
-          <div class="design-img-btn">
-            <img src="assets/502362533458026458.jpeg" alt="Ruby Square">
-          </div>
-
-          <div class="design-body">
-            <div class="design-header">
-              <div>
-                <h3>Ruby Square</h3>
-                <p class="category">Manicures</p>
-              </div>
-              <button class="like-btn">♥ 29</button>
-            </div>
-            <p class="price">KES 1,500</p>
-            <div class="design-actions">
-              <button class="btn btn-ghost">View Details</button>
-              <button class="btn btn-primary">Book This Design</button>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="gallery-footer">
-
-        <button class="btn btn-outline">View All Designs</button>
-        <p class="note">Sample designs and like counts. Your likes are saved on this device only.</p>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="about">
-
-      <img src="assets/0967a123068ce32206989c1668b4059c.jpg" alt="Nail technician painting a client's nails">
-      <div class="about-text">
-        <p class="eyebrow">About</p>
-        <h2>Unhurried care, beautiful detail</h2>
-        <p>FoloApp is a nail studio for people who love a fresh set and a calm hour to themselves. From clean classic manicures to sculpted extensions and hand-painted art, every appointment is about careful prep, hygienic tools and a finish you'll keep admiring.</p>
-        <p class="specialties">Specialties: gel colour, extensions, French tips and custom nail art.</p>
-      </div>
-    </section>
-
-    <!-- BOOKING -->
-    <section id="booking" class="booking">
-      <p class="eyebrow">Book Appointment</p>
-      <h2>Reserve your chair</h2>
-
-      
-      
-
-      <div class="reminder-notice">
-        <strong>Want to book an Appointment?</strong> Select the date and time on the Google calender and input your details on the form, the confirm your appointment. 
-       
-        
-      </div>
-      <div class="reminder-notice">
-        <strong>Warning</strong> Please Avoid click an appointment that has already been reserved, because it will not be a booked. 
-
-      </div>
-
-      <form class="booking-form">
-
-        <div class="booking-left">
-
-          <div class="form-group">
-            <label>1 · Service</label>
-            <select id="service">
-              <option value="classic-mani" selected>Classic Manicure — KES 800</option>
-              <option value="classic-pedi">Classic Pedicure — KES 1,000</option>
-              <option value="gel-mani">Gel Manicure — KES 1,500</option>
-              <option value="gel-pedi">Gel Pedicure — KES 1,800</option>
-              <option value="acrylic-ext">Acrylic Nail Extensions — KES 2,500</option>
-              <option value="gel-ext">Gel Nail Extensions — KES 2,800</option>
-              <option value="french">French Tips — KES 1,500</option>
-              <option value="nail-art">Nail Art — From KES 300</option>
-              <option value="combo">Manicure &amp; Pedicure Combo — KES 2,000</option>
-            </select>
-            <p class="duration-hint">~45 min</p>
-          </div>
-
-          <div class="form-group">
-            <label>2 · Date</label>
-            <div id="calendar" class="calendar">
-              <div class="google-booking">
-                <!-- Google Calendar Appointment Scheduling begin -->
-                <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ24jQ8M0Nf6HcYWwG0dbHGuo20VkR81I_Y5Gsj-Whs0cjpU6yE2MHWwkWrslHz5Yg4JULPRiRb9?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
-                <!-- end Google Calendar Appointment Scheduling -->
-              </div>
-            
-
-
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>3 · Time</label>
-            <p class="time-hint">Pick a date to see available times.</p>
-            <div id="time-slots" class="time-slots"></div>
-          </div>
-        </div>
-
-        <div class="booking-right">
-
-          <label class="section-label">4 · Your details</label>
-          <form class="bookingForm" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="beb7c97a-b70b-4b41-a457-94638c4973c4" />
-            <input type="hidden" name="subject" value="New message from portfolio" />
-            <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fullName">Full name</label>
-                <input id="name" name="full_name" type="text" required autocomplete="given-name" />
-              </div>
-              <div class="form-group">
-                <label for="Contact">Phone number</label>
-                <input id="phone" name="contact" type="text" required autocomplete="family-name" />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required autocomplete="email" />
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="notes" name="message" rows="5" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-full">Confirm Appointment</button>
-
-            <input type="hidden" name="service" id="hidden-service" value="Classic Manicure">
-            <input type="hidden" name="price" id="hidden-price" value="KES 800">
-            <input type="hidden" name="time" id="hidden-time" value="">
-
-
-          
-          </form>      
-          <div class="summary">
-            <p class="summary-service">Classic Manicure</p>
-            <p class="summary-date">No date yet</p>
-            <p class="summary-price">KES 800</p>
-          </div>
-          
-          
-          
-        </div>
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Enter your name" required>
+        <input type="password" id="password" placeholder="Enter password" required>
+        <button type="submit">Login</button>
       </form>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-      <h2>Say hello</h2>
-      <div class="contact-content">
-        <ul class="contact-info">
-          <li>Mon – Sat, 9:00 – 19:00 (sample hours)</li>
-          <li>Phone, email, location and social links will appear here once the salon adds them.</li>
-        </ul>
-        <div class="contact-actions">
-          <button class="btn btn-secondary">Book Appointment</button>
-        </div>
+      <p class="note">Demo: type any name and password</p>
+    </div>
+  </section>
+
+  <!-- ========== 3. MAIN APP ========== -->
+  <section id="app" class="page">
+    
+    <div class="container">
+      <header>
+        <h1>Folo App</h1>
+        <button type="button" id="logoutBtn">Logout</button>
+      </header>
+
+      <p>Welcome, <span id="userName"></span>!</p>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search a course (e.g. Engineering)">
+        <button type="button" id="searchBtn">Search</button>
       </div>
-      <p class="copyright">© 2026 FoloApp · Beautiful nails. Effortless bookings.</p>
-    </section>
 
-  </main>
+      <h2>Books</h2>
+      <div id="results"></div>
 
+      <h2>YouTube Learning Videos</h2>
+      <div id="youtubeResults"></div>
+    </div>
+  </section>
+
+  <footer class=".footer">
+    <form>
+
+    </form>
+    <p>&copy; 2026 FoloApp. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
-
-<!--My script file-->
-<script src="js/Script.js"></script>
 </html>
