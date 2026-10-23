@@ -99,7 +99,6 @@ body {
   background-color: #ffffffec;
   justify-content: space-between;
 
-
 }
 
 
@@ -127,7 +126,14 @@ a {
 }
 #landing{
   padding: 5rem;
+  margin: 5rem;
 }
+#login{
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+
+}
+
 
 /* ===== Buttons ===== */
 button {
