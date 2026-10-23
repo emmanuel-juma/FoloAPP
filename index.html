@@ -70,57 +70,70 @@
 
   <!-- ========== 3. MAIN APP ========== -->
   <section id="app" class="page">
+
     
-    <div class="container">
-      <header>
-        <h1>Folo App</h1>
-        <button type="button" id="logoutBtn">Logout</button>
-      </header>
+      <div class="container">
+        <header>
+          <h1>Folo App</h1>
+          <button type="button" id="logoutBtn">Logout</button>
+        </header>
 
-      <p>Welcome, <span id="userName"></span>!</p>
+        <p>Welcome, <span id="userName"></span>!</p>
 
-      <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search a course (e.g. Engineering)">
-        <button type="button" id="searchBtn">Search</button>
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search a course (e.g. Engineering)">
+          <button type="button" id="searchBtn">Search</button>
+        </div>
+
+        <h2>Books</h2>
+        <div id="results"></div>
+
+        <h2>YouTube Learning Videos</h2>
+        <div id="youtubeResults"></div>
       </div>
-
-      <h2>Books</h2>
-      <div id="results"></div>
-
-      <h2>YouTube Learning Videos</h2>
-      <div id="youtubeResults"></div>
-    </div>
   </section>
+
+
   <section id="blog">
+  
     <div class="blog-item">
-      <h3>The Importance of Studying</h3>
-      <p>
-        Studying helps us gain knowledge, develop skills, and prepare for a better future. It improves our ability to think critically, solve problems, and make informed decisions. Consistent study habits build discipline and open doors to new opportunities in education and careers.
-      </p>
-
-    </div>
-    <div class="blog-item">
-      <h3>Artificial Intelligence (AI) in Education</h3>
-      <p>
-        Artificial Intelligence is transforming how students learn. AI tools can explain difficult concepts, answer questions, summarize notes, and provide personalized learning support. However, students should use AI responsibly—as a learning assistant rather than a replacement for independent thinking, creativity, and personal effort.
-      </p>
-
-    </div>
-    <div class="blog-item">
-      <h3>The Power of Reading Books</h3>
-      <p>
-        Books are valuable sources of knowledge, wisdom, and inspiration. Reading improves vocabulary, concentration, imagination, and communication skills. Whether reading textbooks, biographies, novels, or self-development books, students can discover new ideas and gain a deeper understanding of the world.
-      </p>
-
-    </div>
-    <div class="blog-item">
-      <h3>Technology and the Future of Learning</h3>
-      <p>
-        Technology has made education more accessible than ever. Online libraries, educational videos, digital notes, and learning platforms allow students to study beyond the classroom. By combining technology with traditional learning methods, students can explore more resources, develop digital skills, and prepare for the demands of the modern world.
-      </p>
-
+      <div class="blog-item-content">
+        <h3>The Importance of Studying</h3>
+        <p>
+          Studying helps us gain knowledge, develop skills, and prepare for a better future. It improves critical thinking, problem-solving, and decision-making. Consistent study habits build discipline and open doors to new educational and career opportunities.
+        </p>
+      </div>
     </div>
 
+   <!-- Topic 2: Artificial Intelligence -->
+    <div class="blog-item">
+      <div class="blog-item-content">
+        <h3>Artificial Intelligence (AI) in Education</h3>
+        <p>
+          AI is transforming how students learn. It can explain difficult concepts, summarize notes, answer questions, and provide personalized support. Students should use AI responsibly as a learning assistant, not as a replacement for independent thinking and creativity.
+        </p>
+      </div>
+    </div>
+
+  <!-- Topic 3: Reading Books -->
+    <div class="blog-item" >
+      <div class="blog-item-content">
+        <h3>The Power of Reading Books</h3>
+        <p>
+          Books are valuable sources of knowledge, wisdom, and inspiration. Reading improves vocabulary, concentration, imagination, and communication skills. Textbooks, biographies, novels, and other books help students discover new ideas and understand the world better.
+        </p>
+      </div>
+    </div>
+
+   <!-- Topic 4: Technology -->
+    <div class="blog-item" >
+      <div class="blog-item-content">
+        <h3>Technology and the Future of Learning</h3>
+        <p>
+          Technology makes education more accessible through online libraries, educational videos, digital notes, and learning platforms. Combining technology with traditional learning helps students discover resources, develop digital skills, and prepare for the modern world.
+        </p>
+      </div>
+    </div>
   </section>
 
   <footer class=".footer">
