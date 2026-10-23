@@ -498,35 +498,51 @@
         </div>
 
         <div class="booking-right">
+
           <label class="section-label">4 · Your details</label>
+          <form class="bookingForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="beb7c97a-b70b-4b41-a457-94638c4973c4" />
+            <input type="hidden" name="subject" value="New message from portfolio" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
 
-          <div class="form-group">
-            <label for="name">Full name</label>
-            <input type="text" id="name" maxlength="80">
-          </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full name</label>
+                <input id="name" name="full_name" type="text" required autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <label for="Contact">Phone number</label>
+                <input id="phone" name="contact" type="text" required autocomplete="family-name" />
+              </div>
+            </div>
 
-          <div class="form-group">
-            <label for="phone">Phone number</label>
-            <input type="tel" id="phone" placeholder="0712 345 678" maxlength="16">
-          </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+            </div>
 
-          <div class="form-group">
-            <label for="email">Email (optional)</label>
-            <input type="email" id="email" maxlength="120">
-          </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="notes" name="message" rows="5" required></textarea>
+            </div>
 
-          <div class="form-group">
-            <label for="notes">Design reference or notes (optional)</label>
-            <textarea id="notes" maxlength="500"></textarea>
-          </div>
+            <button type="submit" class="btn btn-primary btn-full">Confirm Appointment</button>
 
+            <input type="hidden" name="service" id="hidden-service" value="Classic Manicure">
+            <input type="hidden" name="price" id="hidden-price" value="KES 800">
+            <input type="hidden" name="time" id="hidden-time" value="">
+
+
+          
+          </form>      
           <div class="summary">
             <p class="summary-service">Classic Manicure</p>
             <p class="summary-date">No date yet</p>
             <p class="summary-price">KES 800</p>
           </div>
-
-          <button type="submit" class="btn btn-primary btn-full">Confirm Appointment</button>
+          
+          
+          
         </div>
       </form>
     </section>

@@ -92,27 +92,78 @@ const bookingForm = document.querySelector('.booking-form');
 // the data for all the services
 
 const services = {
-    'classic-mani': { name: 'Classic Manicure', price: 'KES 800', duration: 45 },
-    'classic-pedi': { name: 'Classic Pedicure', price: 'KES 1,000', duration: 60 },
-    'gel-mani': { name: 'Gel Manicure', price: 'KES 1,500', duration: 60 },
-    'gel-pedi': { name: 'Gel Pedicure', price: 'KES 1,800', duration: 75 },
-    'acrylic-ext': { name: 'Acrylic Nail Extensions', price: 'KES 2,500', duration: 120 },
-    'gel-ext': { name: 'Gel Nail Extensions', price: 'KES 2,800', duration: 120 },
-    'french': { name: 'French Tips', price: 'KES 1,500', duration: 60 },
-    'nail-art': { name: 'Nail Art', price: 'From KES 300', duration: 30 },
-    'combo': { name: 'Manicure & Pedicure Combo', price: 'KES 2,000', duration: 105 }
+  'classic-mani': { name: 'Classic Manicure', price: 'KES 800', duration: 45 },
+  'classic-pedi': { name: 'Classic Pedicure', price: 'KES 1,000', duration: 60 },
+  'gel-mani': { name: 'Gel Manicure', price: 'KES 1,500', duration: 60 },
+  'gel-pedi': { name: 'Gel Pedicure', price: 'KES 1,800', duration: 75 },
+  'acrylic-ext': { name: 'Acrylic Nail Extensions', price: 'KES 2,500', duration: 120 },
+  'gel-ext': { name: 'Gel Nail Extensions', price: 'KES 2,800', duration: 120 },
+  'french': { name: 'French Tips', price: 'KES 1,500', duration: 60 },
+  'nail-art': { name: 'Nail Art', price: 'From KES 300', duration: 30 },
+  'combo': { name: 'Manicure & Pedicure Combo', price: 'KES 2,000', duration: 105 }
 }
 
 // This code will Update summary when service changes
-  if (serviceSelect) {
-    serviceSelect.addEventListener('change', () => {
-      const selected = services[serviceSelect.value];
-      if (selected) {
-        if (durationHint) durationHint.textContent = `~${selected.duration} min`;
-        if (summaryService) summaryService.textContent = selected.name;
-        if (summaryPrice) summaryPrice.textContent = selected.price;
-      }
-    });
+if (serviceSelect) {
+  serviceSelect.addEventListener('change', () => {
+    const selected = services[serviceSelect.value];
+    if (selected) {
+      if (durationHint) durationHint.textContent = `~${selected.duration} min`;
+      if (summaryService) summaryService.textContent = selected.name;
+      if (summaryPrice) summaryPrice.textContent = selected.price;
+    }
+  });
 }
+
+
+
+// form submit code
+
+if (bookingForm){
+  bookingForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+  })
+}
+
+const Name = document.getElementById('name')?.value.trim();
+const phone = document.getElementById('phone')?.value.trim();
+const email = document.getElementById('email')?.value.trim();
+const notes = document.getElementById('notes')?.value.trim();
+const service = serviceSelect?.value;
+const selectedTime = document.querySelector('.time-slot.selected')?.textContent;
+
+
+// validation code
+if (!Name || !phone){
+  alert("please enter your name and phone number")
+  return;
+}
+
+
+if (!selectedTime) {
+  alert('Please select a time slot.');
+  return;
+}
+
+if ( Name !== '' && phone !== '' && email !== '' && service !== '' ){
+  alert('Appointment booked successful')
+}else{
+  e.preventDefault();
+  alert('please fill in the form')
+}
+
+
+
+const booking = {
+  id: Date.now(),
+  service: services[service]?.name || service,
+  price: services[service]?.price,
+  time: selectedTime,
+  Name,
+  phone,
+  email,
+  notes,
+  createdAt: new Date().toISOString()
+};
 
 
